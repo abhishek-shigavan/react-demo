@@ -3,6 +3,7 @@ import './App.css';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react';
 import { loginApiCall } from './utils/Api';
+import RoutingModule from './RoutingModule';
 
 
 function App() {
@@ -20,9 +21,10 @@ function App() {
 
   return (
     <>
-     <TextField onChange={e => emailVal = e.target.value} id="outlined-basic" label="Outlined" variant="outlined" />
+     {/* <TextField onChange={e => emailVal = e.target.value} id="outlined-basic" label="Outlined" variant="outlined" />
      {showErrMsg && <span>Email is required</span>}
-    <button onClick={() => handleLogin("sadasfds")}>Login</button>
+    <button onClick={() => handleLogin("sadasfds")}>Login</button> */}
+    <RoutingModule/>
     </>
   );
 }

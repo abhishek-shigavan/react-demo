@@ -1,4 +1,4 @@
-function Parent () {
+function ParentComponent () {
     return (
         <>
             <h1>Parent</h1>
@@ -6,4 +6,4 @@ function Parent () {
     )
 }
 
-export default Parent
+export default ParentComponent
