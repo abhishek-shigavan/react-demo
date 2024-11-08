@@ -1,24 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import TextField from '@mui/material/TextField';
+import { useState } from 'react';
+import { loginApiCall } from './utils/Api';
+
 
 function App() {
+  const[showErrMsg, setShowErrMsg] = useState(false)
+  let emailVal = ""
+  const handleLogin = (param1) => {
+    if(!emailVal.length) {
+      setShowErrMsg(true)   
+      return
+    }
+    loginApiCall()
+    console.log(showErrMsg);
+    
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <TextField onChange={e => emailVal = e.target.value} id="outlined-basic" label="Outlined" variant="outlined" />
+     {showErrMsg && <span>Email is required</span>}
+    <button onClick={() => handleLogin("sadasfds")}>Login</button>
+    </>
   );
 }
 
