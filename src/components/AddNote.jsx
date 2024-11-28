@@ -1,6 +1,8 @@
+import { useState } from "react"
 import { addNoteApi } from "../utils/Api"
 
 function AddNote ({handleNotesList}) {
+    const[isExpanded, setIsExpanded] = useState(false)
     const handleAddNote = () => {
         // state toggle
         //api call --> title & description should be there
@@ -11,9 +13,14 @@ function AddNote ({handleNotesList}) {
 
     return (
         <>
-            <h1>AddNote</h1>
-            <button onClick={handleAddNote}>close</button>
-            <br /><br /><br />
+            {isExpanded ?
+                <div>
+                    <input type="text" placeholder="title"/>
+                    <br />
+                    <input type="text" placeholder="description"/>
+                </div>
+                : <span>Take a note</span>
+            }
         </>
     )
 }

@@ -8,7 +8,7 @@ export const loginApiCall = async() => {
 }
 
 export const getAllNotesApiCall = () => {
-    return axios.get(`https://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList?access_token=${localStorage.getItem('accessToken')}`,)
+    return axios.get(`https://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList?access_token=uW76D353rmFVzVoNnf7kParPpU7A4CArAPyjNbOsCPf1CPekF1VlHnIhdmftzSG1`,)
 }
 
 export const addNoteApi = (payload) => {

@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import { useState } from 'react';
 import { loginApiCall } from './utils/Api';
 import RoutingModule from './RoutingModule';
+import Signup from './components/Signup';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
      {showErrMsg && <span>Email is required</span>}
     <button onClick={() => handleLogin("sadasfds")}>Login</button> */}
     <RoutingModule/>
+    {/* <Signup/> */}
     </>
   );
 }
